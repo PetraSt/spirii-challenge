@@ -39,6 +39,21 @@ $ npm run test
 $ npm run test:cov
 ```
 
+## Manual Testing the API
+```bash
+# Get user data
+http://localhost:3000/aggregation/user/085123
+
+# Get user transactions from a specific date (date to be changed to a valid date)
+http://localhost:3000/aggregation/user/085123/transactions?startDate=2023-03-01
+
+# Get all transactions from a specific date (date to be changed to a valid date)
+http://localhost:3000/aggregation/transactions?startDate=2023-03-01
+
+# Get payout requests
+http://localhost:3000/aggregation/payouts
+```
+
 ## Limitations
  - The service does not handle concurrent requests.
  - The service uses in-memory caching, which is not suitable for a large scale application, in this mvp I decided to keep it simple.
